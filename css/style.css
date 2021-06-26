@@ -1,0 +1,498 @@
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+body {
+	background-image: url(../img/fondo.png);
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Mukta', sans-serif;
+	font-weight: bold;
+	color: #0D0D0D
+	;
+}
+
+
+/*empieza el encabezado y menu, igual en todas las paginas*/
+/*se utiliza flex*/
+.encabezado{
+	display: flex;
+	flex-direction: column;
+	margin:15px;
+	padding: 15px;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.encabezado__titulo {
+	font-family: 'Mukta', sans-serif;
+	color: ;
+	font-size: 60px;
+	text-align: center;
+
+}
+.encabezado__redesSociales {
+	text-decoration: none;
+	list-style-type: none;
+	position: absolute;	
+	right: 0px;
+	top: 0px;
+	display: inline;
+		
+}
+.encabezado__redesSociales li {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+
+.menu{
+	text-align: center;
+		
+}
+
+.menu__secciones li{
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+
+}
+
+.menu__secciones li a{
+	font-size: 32px;
+	text-decoration: none;
+	color: #0D0D0D;
+	
+}
+.menu__secciones li a:hover{
+	color: black;
+	
+}
+.encabezado__logo{
+animation-name: efecto__logo;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in;
+   animation-duration: 5s;
+   animation-delay: 5s;
+}
+/*termina el encabezado y menu*/
+/*menu lateral de facil acceso a las cotizaciones*/
+/*se utiliza flex*/
+
+.barraLateral__cotizaciones{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 200px;
+	right: 2px;
+	list-style: none;
+	margin-right: 2px
+	
+}
+
+/*contenido principal del home*/
+/*se utiliza flex*/
+.slider{
+	display: flex;
+	margin: 10px;
+	padding: 0;
+	height: 150px;
+	justify-content: space-around;
+	
+	
+}
+
+.slider img{
+	margin: 2px;
+	width: 20%;
+	height: 100%;
+   transition: height 2s
+}	
+.slider img:hover {
+	height: 120px;
+ }
+ 
+
+.introduccion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 15px;
+	margin-right: 15px;
+	text-align: center;
+	
+}
+.introduccion__titulo{
+	font-family: 'Mukta', sans-serif;
+	background: linear-gradient(
+    135deg, #F2766B 0%,#B4D97E 100%);
+	border-radius: 10px;
+	border: solid;
+
+}
+.introduccion p{
+	color: black;
+	font-family: 'Mukta', sans-serif;
+	;
+	width: 95%;
+	
+}
+/*se utiliza GRID*/
+#caracteristicas{
+	display: grid;
+	grid-template-areas: 
+		"titulo titulo"
+		"lista publicidad"
+		"fuente fuente";
+	grid-template-rows: 0.05fr 0.5fr 0.05fr;
+	grid-template-columns: 40% 60%;
+	height: 100vh;
+	margin: 20px 35px 20px 20px;
+	padding: 20px;
+	grid-row-gap: 4px;
+	height: 75%;	
+}
+
+.caracteristicas__titulo{
+	grid-area: titulo;
+	justify-self: center;
+	color: ;
+	background: linear-gradient(
+    135deg, #F2766B 0%,#B4D97E 100%);
+	border-radius: 10px;
+	border: solid;
+
+}
+.caracteristicas__lista, li::marker{
+	grid-area: lista;
+	
+	justify-self: stretch;
+	list-style: square;
+}
+.caracteristicas__publicidad{
+	grid-area: publicidad;
+	
+}
+.caracteristicas__pie{
+	grid-area: fuente;
+	text-align: center;
+}
+
+
+
+#ventajasDesventajas{
+	display: grid;
+	grid-template-areas: 
+	"intro"
+	"ventajas"
+	"lista1"
+	"desventajas"
+	"lista2";
+	grid-template-rows: 1fr 0.15fr 0.7fr 0.15fr 0.7fr;
+	padding: 20px;
+	margin: 15px;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	border: 2px solid;
+	border-color: #B4D97E;;
+
+}
+.ventajasDesventajas__intro{
+	grid-area: intro;
+	
+}	
+.ventajasDesventajas__texto {
+	margin:20px;
+	justify-self: center;
+	text-align: center;
+	
+}
+.ventajasDesventajas__ventajas{
+	grid-area: ventajas;
+	
+}
+.ventajasDesventajas__titulo{
+	background: linear-gradient(
+    135deg, #F2766B 0%,#B4D97E 100%);
+	border-radius: 10px;
+	text-align: center;
+	border:solid
+
+}
+.ventajasDesventajas__ventajas{
+	grid-area: lista1;
+	
+}
+.ventajasDesventajas__lista{
+	
+	text-align: center;
+	list-style: none;
+}
+
+.ventajasDesventajas__desventajas{
+	grid-area: lista2;
+	
+}
+
+
+/*fin del home*/
+
+/*inicio seccion noticias*/
+
+#container{
+	display: grid; 
+  grid-template-columns: 1fr 2.5fr; 
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr; 
+  gap: 3px 3px; 
+  grid-template-areas: 
+    "titulo titulo"
+    "img1 texto1"
+    "img2 texto2"
+    "img3 texto3"
+    "img4 texto4"; 
+	margin: 15px;
+	padding: 15px;
+}
+.tituloNoticias{
+	grid-area: titulo;
+}
+.img1{
+	grid-area: img1;
+	
+}
+.tetxo1{
+	grid-area: texto1;
+}
+.img2{
+	grid-area: img2;
+	
+}
+.tetxo1{
+	grid-area: texto2;
+}
+.img3{
+	grid-area: img3;
+	
+}
+.tetxo3{
+	grid-area: texto3;
+}
+.img4{
+	grid-area: img4;
+	
+}
+.tetxo4{
+	grid-area: texto4;
+}
+.tituloNoticias{
+	text-align: center;
+	font-family: inherit;
+	font-weight: bold;
+}
+.texto1, .texto2, .texto3, .texto4 {
+	margin: 15px;
+	padding: 15px;
+	text-align: left;
+	height: 130px;
+	
+}
+.texto1 p, .texto2 p, .texto3 p, .texto4 p{
+	background-image: linear-gradient(to left,#F2766B ,#B4D97E );
+	border-radius: 10px;
+	border: solid;
+}
+.img1, .img2, .img3, .img4{
+	margin: 5px 10px 5px 10px;
+	padding: 15px;
+	
+	
+}
+#container img{
+	width: 100%;
+	
+}
+
+/*inicio seccion cotizaciones-info*/
+
+#info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 15px;
+	margin: 15px;
+	text-align: center;
+	
+
+}
+.info__titulo{
+	background-image: linear-gradient(to left,#F2766B ,#B4D97E );
+	border-radius: 10px;
+	border: solid;
+	width: 500px;
+	margin: 17px;
+}
+.info__subtitulo{
+	margin: 17px;
+}
+
+
+.pregunta{ 
+	margin: 20px;
+	background-image: linear-gradient(to left,#F2766B ,#B4D97E );
+	border-radius: 10px;
+	border: solid;
+	width: 650px;
+	height: 40px;
+
+
+}
+.pregunta__respuesta{
+	margin:15px;
+    position: relative;
+    padding: 18px 20px 8px 20px;
+    box-sizing: border-box;
+    border-left: 4px solid rgb(78,0,190);
+    border-right: 4px solid rgba(165,0,190,1);
+	border-top: 4px solid rgba(165,0,190,1) ;
+	border-bottom: 4px solid rgb(78,0,190);
+    border-radius: 2px;
+}
+
+
+/*inicio seccion newsletter*/
+
+#formulario{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+  
+ 
+  
+  .flex-outer,
+  .flex-inner {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  .flex-outer {
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .flex-outer li,
+  .flex-inner li{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+  }
+  
+  .flex-inner {
+	padding: 0 8px;
+	justify-content: space-between;  
+  }
+  
+  .flex-outer > li:not(:last-child) {
+	margin-bottom: 20px;
+  }
+  
+  .flex-outer li label,
+  .flex-outer li p {
+	padding: 8px;
+	font-weight: 300;
+	letter-spacing: .09em;
+	text-transform: uppercase;
+  }
+  
+  .flex-outer > li > label,
+  .flex-outer li p {
+	flex: 1 0 120px;
+	max-width: 220px;
+  }
+  
+  .flex-outer > li > label + *,
+  .flex-inner {
+	flex: 1 0 220px;
+  }
+  
+  .flex-outer li p {
+	margin: 0;
+  }
+  
+  .flex-outer li input:not([type='checkbox']),
+  .flex-outer li textarea {
+	padding: 15px;
+	border: none;
+  }
+  
+  .flex-outer li button {
+	margin-left: auto;
+	padding: 8px 16px;
+	border: none;
+	background: #333;
+	color: #f2f2f2;
+	text-transform: uppercase;
+	letter-spacing: .09em;
+	border-radius: 2px;
+  }
+  
+  .flex-inner li {
+	width: 100px;
+}
+#botonera{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	
+}
+.boton{
+	background-image: linear-gradient(to left,#F2766B ,#B4D97E );
+	border-radius: 10px;
+	border: solid;
+}
+.boton:hover{
+	cursor:grabbing;
+}
+
+/*media queries y keyframes*/
+@media (max-width: 768px){
+	body{
+		color: #f1f1f1;
+		background: linear-gradient(
+    135deg, #F2766B 0%,#B4D97E 100%);
+	font-size: x-small;
+	}
+	.encabezado__logo{
+		width: auto;
+	}
+
+}
+@media screen and (max-width: 763px) {
+	.menu__secciones {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 763px) {
+	.slider img{
+		width: auto;
+	}
+}
+@keyframes efecto__logo {
+	0%{ width: 100px; }
+	0.2s{ width: 75px; }
+	25%{ width: 50px; }
+	50%{ width: 25px; }
+	}
+ 
